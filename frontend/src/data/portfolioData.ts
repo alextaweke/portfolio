@@ -73,7 +73,7 @@ export const portfolioData = {
       title: "Portfolio Website",
       description:
         "A personal portfolio built with React + TypeScript + Tailwind.",
-      link: "https://alextaweke.com",
+      link: "https://web-developer-portfolio-4.onrender.com",
       github: "https://github.com/alextaweke/web-developer-portfolio.git",
       image: "images/projects/alexo.png",
     },
@@ -84,6 +84,14 @@ export const portfolioData = {
       link: "https://alextaweke-internetcafe.com",
       github: "https://github.com/alextaweke/Internet-Cafe.git",
       image: "images/projects/internet.jfif",
+    },
+    {
+      title: "Attorney Website",
+      description:
+        "A professional website for attorneys to showcase their services and expertise.",
+      link: "https://attorney-website-1.onrender.com",
+      github: "https://github.com/alextaweke/attorney-website.git",
+      image: "images/projects/application.avif",
     },
     {
       title: "Student Management System",
