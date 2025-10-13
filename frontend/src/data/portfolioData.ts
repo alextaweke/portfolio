@@ -91,7 +91,7 @@ export const portfolioData = {
         "A professional website for attorneys to showcase their services and expertise.",
       link: "https://attorney-website-1.onrender.com",
       github: "https://github.com/alextaweke/attorney-website.git",
-      image: "images/projects/application.avif",
+      image: "images/projects/court.jfif",
     },
     {
       title: "Student Management System",
