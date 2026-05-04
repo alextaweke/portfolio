@@ -1,9 +1,9 @@
-// src/data/portfolioData.ts
 export const portfolioData = {
+  // keep your existing profile info...
   name: "Alemayehu Taweke",
-  title: "Full-Stack Web Developer",
+  title: "Full-Stack Engineer (React, Next.js, Django, Node.js)",
   description:
-    "I specialize in building modern, scalable, and user-friendly web applications using React, TypeScript, NestJS, Django, and Express.",
+    "I help businesses design and build scalable full-stack applications, combining modern React/Next.js frontends with robust Django and Node.js backends. My focus is on performance, API reliability, and clean, maintainable architecture.",
   github: "https://github.com/alextaweke",
   linkedin: "https://linkedin.com/in/alemayehu-taweke-6b6a6331b",
   email: "alextaweke@gmail.com",
@@ -67,74 +67,193 @@ export const portfolioData = {
       color: "purple",
     },
   ],
-
   completedProjects: [
     {
-      title: "Portfolio Website",
+      title: "Distributed Drone Delivery System",
       description:
-        "A personal portfolio built with React + TypeScript + Tailwind.",
-      link: "https://web-developer-portfolio-4.onrender.com",
-      github: "https://github.com/alextaweke/web-developer-portfolio.git",
-      image: "images/projects/alexo.png",
+        "Scalable delivery platform with real-time tracking and asynchronous task processing.",
+
+      link: "https://drone-taxi-iqv4.vercel.app/",
+      github: "https://github.com/alextaweke/Drone_Taxi/",
+      image: "images/projects/drone.jpg",
+
+      category: "distributed systems",
+      tech: ["Django", "Celery", "Redis", "PostgreSQL", "React"],
+
+      problem:
+        "Traditional delivery systems cannot efficiently handle dynamic user requests or real-time coordination, especially in congested environments.",
+
+      solution:
+        "Designed a distributed backend using Django and Celery to process delivery tasks asynchronously, enabling dynamic assignment and real-time tracking.",
+
+      features: [
+        "Real-time drone tracking with live updates",
+        "Asynchronous task processing using Celery",
+        "Bidirectional delivery (send & receive)",
+        "Retry logic for failed tasks",
+      ],
+
+      challenges: [
+        "Handling concurrent delivery requests",
+        "Ensuring reliability of background jobs",
+        "Synchronizing real-time updates with frontend",
+      ],
+
+      featured: true,
     },
+
     {
-      title: "Internet Cafe Management System",
+      title: "Bank Transaction Monitoring System",
       description:
-        "Manage users, session time, and billing in an internet cafe environment.",
-      link: "https://alextaweke-internetcafe.com",
-      github: "https://github.com/alextaweke/Internet-Cafe.git",
-      image: "images/projects/internet.jfif",
+        "Backend system for processing and monitoring financial transactions with external API integration.",
+
+      link: "#",
+      github: "#",
+      image: "images/projects/bank.jpg",
+
+      category: "api integration",
+      tech: ["Node.js", "Express.js", "PostgreSQL", "React Typescript"],
+
+      problem:
+        "Financial systems require reliable processing of transactions from external APIs while handling failures and ensuring data consistency.",
+
+      solution:
+        "Implemented a backend system that integrates with external APIs, processes transactions asynchronously, and ensures consistency using validation and retry mechanisms.",
+
+      features: [
+        "External API integration",
+        "Transaction validation and consistency checks",
+        "Background processing with Celery",
+        "Failure handling and retry logic",
+      ],
+
+      challenges: [
+        "Handling unreliable external APIs",
+        "Ensuring data consistency across systems",
+        "Processing large volumes of transactions",
+      ],
     },
+
     {
-      title: "Attorney Website",
+      title: "Urban Land Management System",
       description:
-        "A professional website for attorneys to showcase their services and expertise.",
-      link: "https://attorney-website-1.onrender.com",
-      github: "https://github.com/alextaweke/attorney-website.git",
-      image: "images/projects/court.jfif",
+        "Enterprise system for managing land records, ownership, and payments.",
+
+      link: "https://land-management-system-flame.vercel.app/",
+      github: "https://github.com/alextaweke/land-management-system",
+      image: "images/projects/land.jpg",
+
+      category: "backend systems",
+      tech: ["Django", "PostgreSQL", "React typescript", "Tailwind CSS"],
+
+      problem:
+        "Managing land ownership data requires secure role-based access and efficient handling of large datasets.",
+
+      solution:
+        "Built a backend system with structured data models and role-based access control to manage land records and transactions.",
+
+      features: [
+        "Role-based access control",
+        "Efficient data management",
+        "Payment tracking system",
+        "Administrative dashboard",
+      ],
+
+      challenges: [
+        "Designing scalable data models",
+        "Handling large datasets efficiently",
+        "Ensuring secure access control",
+      ],
     },
+
+    {
+      title: "Pension Management System",
+      description:
+        "System for managing pension contributions, beneficiaries, and payments.",
+
+      link: "#",
+      github: "#",
+      image: "images/projects/pension.jpg",
+
+      category: "backend systems",
+      tech: ["NestJS", "PostgreSQL", "React typescript", "Tailwind CSS"],
+
+      problem:
+        "Pension systems require accurate tracking of contributions and secure handling of beneficiary data.",
+
+      solution:
+        "Developed a backend system that tracks contributions, calculates benefits, and manages user data securely.",
+
+      features: [
+        "Contribution tracking",
+        "Beneficiary management",
+        "Secure data handling",
+        "Reporting system",
+      ],
+
+      challenges: [
+        "Maintaining data accuracy",
+        "Handling sensitive information securely",
+        "Designing financial logic",
+      ],
+    },
+
     {
       title: "Student Management System",
       description:
-        "Manage student records, attendance, and academic performance efficiently.",
-      link: "https://alextaweke-students.com",
-      github: "https://github.com/alextaweke/Student-MERN.git",
+        "System for managing student data, attendance, and academic performance.",
+
+      link: "#",
+      github: "#",
       image: "images/projects/student.jfif",
-    },
-    {
-      title: "Pension System",
-      description:
-        "A system to manage pensions, contributions, and beneficiary details securely.",
-      link: "https://alextaweke-pension.com",
-      github: "https://github.com/alextaweke/pensition-MERN.git",
-      image: "images/projects/pension.jpg",
-    },
-    {
-      title: "Ecommerce-React",
-      description:
-        "A React-based e-commerce frontend with dynamic product listings and shopping cart.",
-      link: "https://alextaweke-ecommerce-react.com",
-      github: "https://github.com/alextaweke/ecommerce-react.git",
-      image: "images/projects/ecommerce.png",
-    },
-    {
-      title: "Application Form",
-      description:
-        "An interactive application form with validations and data submission features.",
-      link: "https://alextaweke-applicationform.com",
-      github: "https://github.com/alextaweke/ApplicationForm.git",
-      image: "images/projects/application.avif",
+
+      category: "backend systems",
+      tech: ["Node.js", "MongoDB", "React"],
+
+      problem:
+        "Educational institutions need efficient systems to manage student records and performance tracking.",
+
+      solution:
+        "Built a full-stack application to manage student data, attendance, and academic records.",
+
+      features: [
+        "Student record management",
+        "Attendance tracking",
+        "Performance monitoring",
+        "Admin dashboard",
+      ],
+
+      challenges: [
+        "Designing scalable data structure",
+        "Handling multiple user roles",
+      ],
     },
   ],
 
   ongoingProjects: [
     {
-      title: "Urban Land Management System",
+      title: "Advanced Delivery Optimization System",
       description:
-        "A React + Python/Django system to manage land records and payments.",
-      link: "https://alextaweke-urbanland.com",
-      github: "https://github.com/alextaweke/urban-land-management",
-      image: "images/projects/land.jpg",
+        "Next-generation delivery system focusing on optimization and scalability.",
+
+      link: "#",
+      github: "#",
+      image: "images/projects/drone.jpg",
+
+      category: "distributed systems",
+      tech: ["Django", "Celery", "Redis"],
+
+      problem:
+        "Optimizing delivery routes and handling large-scale requests efficiently.",
+
+      solution:
+        "Enhancing the existing system with improved task scheduling and optimization strategies.",
+
+      features: [
+        "Improved task scheduling",
+        "Scalable architecture",
+        "Enhanced performance",
+      ],
     },
   ],
 };
