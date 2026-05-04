@@ -82,7 +82,7 @@ const Contact: React.FC<ContactProps> = ({ email, phone, location }) => {
     {
       icon: "📱",
       label: "Phone",
-      value: phone || "+251 912 345 678",
+      value: phone || "+251 979 257 541",
       link: `tel:${phone}`,
       color: "from-green-500 to-emerald-500",
     },
