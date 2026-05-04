@@ -33,10 +33,6 @@ CMD ["nginx", "-g", "daemon off;"]
 # Node
 node_modules/
 frontend/node_modules/
-
-# Build
 dist/
 frontend/dist/
-
-# Env
 .env
