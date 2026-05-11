@@ -75,7 +75,7 @@ export const portfolioData = {
 
       link: "https://drone-taxi-iqv4.vercel.app/",
       github: "https://github.com/alextaweke/Drone_Taxi/",
-      image: "images/projects/drone.jpg",
+      image: "images/drone.jpg",
 
       category: "distributed systems",
       tech: ["Django", "Celery", "Redis", "PostgreSQL", "React"],
@@ -97,6 +97,55 @@ export const portfolioData = {
         "Handling concurrent delivery requests",
         "Ensuring reliability of background jobs",
         "Synchronizing real-time updates with frontend",
+      ],
+
+      featured: true,
+    },
+    {
+      title: "SaaS Task Automation MVP",
+
+      description:
+        "Modern SaaS platform for workspace collaboration, task automation, and team management with scalable architecture and real-time workflow organization.",
+
+      link: "https://your-live-demo.vercel.app/",
+      github: "https://github.com/alextaweke/Workflow-Automation-SaaS",
+      image: "images/SaaS.jfif",
+
+      category: "saas platform",
+
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "Zustand",
+        "Tailwind CSS",
+        "JWT",
+      ],
+
+      problem:
+        "Teams often struggle with scattered task management, inefficient collaboration, and lack of centralized workflow automation across departments and companies.",
+
+      solution:
+        "Built a scalable SaaS platform using Django REST Framework and Next.js that enables companies to manage workspaces, departments, tasks, and team collaboration in a centralized system.",
+
+      features: [
+        "Workspace and company management",
+        "Department-based task organization",
+        "Role-based access control",
+        "Workspace member invitations",
+        "Task tracking and analytics dashboard",
+        "JWT authentication system",
+        "RESTful API architecture",
+        "Responsive modern UI",
+      ],
+
+      challenges: [
+        "Managing complex relational data between workspaces and departments",
+        "Handling authentication and role permissions securely",
+        "Synchronizing frontend state with backend APIs",
+        "Designing scalable SaaS architecture",
       ],
 
       featured: true,
@@ -172,7 +221,7 @@ export const portfolioData = {
         "System for managing pension contributions, beneficiaries, and payments.",
 
       link: "#",
-      github: "#",
+      github: "https://github.com/alextaweke/pensition-MERN",
       image: "images/projects/pension.jpg",
 
       category: "backend systems",
@@ -204,7 +253,7 @@ export const portfolioData = {
         "System for managing student data, attendance, and academic performance.",
 
       link: "#",
-      github: "#",
+      github: "https://github.com/alextaweke/Student-MERN",
       image: "images/projects/student.jfif",
 
       category: "backend systems",
