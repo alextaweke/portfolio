@@ -102,6 +102,54 @@ export const portfolioData = {
       featured: true,
     },
     {
+      title: "AI Job Matcher - Upwork Freelancer Automation",
+      description:
+        "Intelligent AI-powered platform that automatically finds, matches, and generates personalized proposals for Upwork jobs based on user skills.",
+
+      link: "https://your-domain.com", // Replace with your deployed URL
+      github: "https://github.com/alextaweke/ai-job-matcher", // Replace with your GitHub URL
+      image: "images/ai-job-matcher-dashboard.webp",
+
+      category: "ai automation",
+      tech: [
+        "Django",
+        "Next.js",
+        "Groq AI",
+        "Celery",
+        "Redis",
+        "PostgreSQL",
+        "TailwindCSS",
+        "WebSocket",
+      ],
+
+      problem:
+        "Freelancers waste hours daily searching for relevant jobs on Upwork, manually writing proposals, and missing opportunities due to slow response times. The platform's RSS feeds are deprecated, making job discovery even harder.",
+
+      solution:
+        "Built an end-to-end AI-powered platform that scrapes Upwork jobs via Apify, uses Groq LLM (Llama 3.3 70B) to calculate match scores, generates personalized proposals, and sends real-time WebSocket notifications - all tailored to each user's skills.",
+
+      features: [
+        "AI-powered job matching with 95% accuracy",
+        "Real-time proposal generation with typing effect",
+        "WebSocket notifications for instant job alerts",
+        "Skill-based personalized job recommendations",
+        "Auto-scan every 30 minutes (Celery/Redis)",
+        "Beautiful analytics dashboard with Recharts",
+        "Dark theme DeepSeek-style UI",
+        "Bulk proposal generation for high-match jobs",
+      ],
+
+      challenges: [
+        "Upwork deprecated RSS feeds (410 error) - switched to Apify API",
+        "Rate limiting with Groq (30 req/min) - implemented queuing system",
+        "Real-time notifications without costly services - built WebSocket with Django Channels",
+        "Personalized match scoring - developed custom algorithm",
+        "Duplicate job detection across multiple users",
+      ],
+
+      featured: true,
+    },
+    {
       title: "SaaS Task Automation MVP",
 
       description:
