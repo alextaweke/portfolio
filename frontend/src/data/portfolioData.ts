@@ -199,7 +199,7 @@ export const portfolioData = {
       featured: true,
     },
     {
-      title: "AI Translator App - Ethiopian Languages",
+      title: "AI Translator App - Afaan Oromo ⇄ English/Amharic",
 
       description:
         "AI-powered translation platform specializing in Ethiopian languages (Afaan Oromo, Amharic, English) with real-time translation, user authentication, translation history, and text-to-speech functionality.",
