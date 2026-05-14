@@ -198,6 +198,102 @@ export const portfolioData = {
 
       featured: true,
     },
+    {
+      title: "AI Translator App - Ethiopian Language Translation Platform",
+      description:
+        "Production-ready AI translation web application supporting Afaan Oromo, English, and Amharic with 90%+ accuracy using Google Gemini AI, complete with user management and translation history.",
+
+      link: "https://ai-translator-ten-murex.vercel.app/",
+      github: "https://github.com/alextaweke/ai-translator",
+      image: "images/ai-translator-demo.png",
+
+      category: "ai translation",
+      tech: [
+        "Next.js 14",
+        "TypeScript",
+        "Supabase",
+        "Google Gemini AI",
+        "TailwindCSS",
+        "PostgreSQL",
+        "Web Speech API",
+        "Google OAuth",
+        "Vercel",
+      ],
+
+      metrics: {
+        translationSpeed: "1-2 seconds",
+        accuracy: "90%+ for common phrases",
+        supportedLanguages: 3,
+        databaseTables: 1,
+        apiEndpoints: 4,
+        monthlyCost: "$0 (free tier)",
+        deploymentTime: "5 minutes",
+      },
+
+      problem:
+        "Ethiopian languages lack robust translation tools. Google Translate has limited support for Afaan Oromo (errors in 40%+ of translations) and poor handling of Ge'ez script for Amharic. No existing solution combines AI translation with user history management and text-to-speech for all three languages.",
+
+      solution:
+        "Engineered a complete translation ecosystem using Google Gemini's advanced LLM. The system achieves 90%+ accuracy for Ethiopian languages by using specialized prompts and context preservation. Features include user authentication, persistent translation history with search and favorites, multilingual text-to-speech, and intelligent language auto-detection.",
+
+      features: [
+        "AI-powered translation (Afaan Oromo ↔ English ↔ Amharic)",
+        "90%+ accuracy with context preservation",
+        "Language auto-detection (Amharic/Oromo/English)",
+        "User authentication with Google OAuth",
+        "Translation history (50+ items with search)",
+        "Favorites system with filtering",
+        "Text-to-speech for all languages",
+        "JSON export functionality",
+        "Copy source/translation/both",
+        "Word/character counter with reading time",
+        "Keyboard shortcuts (4 shortcuts)",
+        "Real-time progress indicator",
+        "Responsive design (mobile/tablet/desktop)",
+        "Dark mode ready",
+      ],
+
+      challenges: [
+        "Gemini model availability: v1beta/gemini-2.0-flash returned 404 - resolved by using correct endpoint structure",
+        "Build-time environment variables: Supabase client failed during prerendering - implemented conditional client initialization",
+        "OAuth configuration: redirect_uri_mismatch error - added proper URLs in Google Cloud Console and Supabase",
+        "Language detection: Oromo shares Latin alphabet with English - developed specialized regex for Oromo-specific patterns",
+        "Amharic TTS: Web Speech API limited Amharic support - implemented language mapping to am-ET locale",
+        "Real-time updates: Needed live history refresh - implemented Supabase WebSocket subscriptions",
+      ],
+
+      architecture: {
+        frontend: "Next.js 14 App Router with TypeScript",
+        backend: "Next.js API routes + Supabase",
+        database: "PostgreSQL (Supabase) with RLS policies",
+        auth: "Supabase Auth + Google OAuth",
+        ai: "Google Gemini API (gemini-2.0-flash)",
+        deployment: "Vercel (automatic preview/production)",
+      },
+
+      useCases: [
+        "NGOs working in Ethiopia",
+        "Educational institutions teaching Ethiopian languages",
+        "Ethiopian diaspora communities",
+        "Healthcare providers with Ethiopian patients",
+        "Tourism industry in Ethiopia",
+        "Government services for citizens",
+        "Language learning platforms",
+      ],
+
+      futureEnhancements: [
+        "Document translation (PDF, Word, Excel)",
+        "Voice input for all languages",
+        "Offline mode with PWA",
+        "Chrome extension for in-page translation",
+        "Team collaboration features",
+        "API access for third-party integration",
+        "Real-time chat translation",
+        "Mobile app (React Native)",
+      ],
+
+      featured: true,
+    },
 
     {
       title: "Bank Transaction Monitoring System",
