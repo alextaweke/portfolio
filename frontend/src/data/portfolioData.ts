@@ -107,7 +107,7 @@ export const portfolioData = {
         "Intelligent AI-powered platform that automatically finds, matches, and generates personalized proposals for Upwork jobs based on user skills.",
 
       link: "https://your-domain.com", // Replace with your deployed URL
-      github: "https://github.com/alextaweke/ai-job-matcher", // Replace with your GitHub URL
+      github: "https://github.com/alextaweke/ai-upwork-matcher", // Replace with your GitHub URL
       image: "images/ai-job-matcher-dashboard.webp",
 
       category: "ai automation",
