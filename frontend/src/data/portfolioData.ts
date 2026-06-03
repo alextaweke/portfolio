@@ -102,6 +102,66 @@ export const portfolioData = {
       featured: true,
     },
     {
+      title: "Social Media Manager - Multi-Platform Content Publisher",
+
+      description:
+        "Comprehensive social media management platform that enables users to create, schedule, and publish content across multiple platforms including Facebook, Telegram, LinkedIn, Instagram, and Twitter from a single dashboard.",
+
+      link: "https://social-media-manager-iota-pearl.vercel.app/",
+      github: "https://github.com/alextaweke/social-media-manager",
+      image: "images/social-media-manager-demo.png",
+
+      category: "social media management",
+
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Supabase",
+        "PostgreSQL",
+        "Facebook Graph API",
+        "Telegram Bot API",
+        "LinkedIn API",
+        "Twitter API",
+        "Tailwind CSS",
+        "Google OAuth",
+        "Vercel",
+      ],
+
+      problem:
+        "Managing multiple social media accounts requires switching between platforms, creating duplicate content, and manually publishing posts. Small businesses and content creators need a centralized solution to streamline content management, scheduling, and publishing workflows.",
+
+      solution:
+        "Built a centralized social media management platform that allows users to connect multiple social accounts, create content once, and publish or schedule it across different platforms simultaneously. The system includes authentication, media management, scheduling, analytics-ready architecture, and platform integrations.",
+
+      features: [
+        "One-click publishing to multiple social media platforms",
+        "Facebook Page integration using Graph API",
+        "Telegram channel and group publishing",
+        "LinkedIn content publishing",
+        "Twitter/X posting support",
+        "Instagram publishing integration",
+        "Google OAuth authentication",
+        "Content scheduling and queue management",
+        "Media upload and attachment support",
+        "Post history and publishing status tracking",
+        "Responsive dashboard for desktop and mobile",
+        "Secure token storage and account management",
+      ],
+
+      challenges: [
+        "Integrating multiple social media APIs with different authentication flows",
+        "Handling Facebook Page Access Tokens and permissions",
+        "Managing Telegram Bot API restrictions and channel permissions",
+        "Implementing secure OAuth authentication workflows",
+        "Supporting different media formats across platforms",
+        "Handling API rate limits and publishing failures",
+        "Managing scheduled publishing jobs reliably",
+        "Deploying and configuring environment variables securely",
+      ],
+
+      featured: true,
+    },
+    {
       title: "AI Job Matcher - Upwork Freelancer Automation",
       description:
         "Intelligent AI-powered platform that automatically finds, matches, and generates personalized proposals for Upwork jobs based on user skills.",
