@@ -2,10 +2,14 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef, useEffect } from "react";
 import { useParams, useNavigate, Link } from "react-router-dom";
-
-interface CaseStudyProps {
-  projects: Project[];
-}
+import {
+  ArrowLeft,
+  ExternalLink,
+  Github,
+  Clock,
+  Users,
+  Briefcase,
+} from "lucide-react";
 
 interface Project {
   title: string;
@@ -29,7 +33,10 @@ interface Project {
   duration?: string;
   team?: string;
   client?: string;
-  screenshots?: string[];
+}
+
+interface CaseStudyProps {
+  projects: Project[];
 }
 
 const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
@@ -53,7 +60,6 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
     if (!project) {
       navigate("/projects");
     }
-    // Scroll to top when case study opens
     window.scrollTo(0, 0);
   }, [project, navigate]);
 
@@ -84,26 +90,14 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
         </motion.div>
 
-        {/* Floating Back Button */}
+        {/* Back Button */}
         <motion.button
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           onClick={() => navigate("/")}
-          className="absolute top-24 left-8 z-20 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-all flex items-center gap-2 border border-white/20"
+          className="absolute top-24 left-8 z-20 px-4 py-2.5 bg-white/10 backdrop-blur-md rounded-full text-white hover:bg-white/20 transition-all flex items-center gap-2 border border-white/20"
         >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
+          <ArrowLeft size={18} />
           Back to Projects
         </motion.button>
 
@@ -120,7 +114,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
             >
               {project.featured && (
                 <span className="inline-block px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-sm font-bold rounded-full mb-6">
-                  Featured Project
+                  ⭐ Featured Project
                 </span>
               )}
 
@@ -135,57 +129,26 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
               {/* Quick Stats */}
               <div className="flex flex-wrap justify-center gap-6 text-white">
                 {project.duration && (
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <Clock size={18} />
                     <span>{project.duration}</span>
                   </div>
                 )}
                 {project.role && (
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <Briefcase size={18} />
                     <span>{project.role}</span>
                   </div>
                 )}
+                {project.team && (
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <Users size={18} />
+                    <span>Team: {project.team}</span>
+                  </div>
+                )}
                 {project.client && (
-                  <div className="flex items-center gap-2">
-                    <svg
-                      className="w-5 h-5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                      />
-                    </svg>
-                    <span>{project.client}</span>
+                  <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
+                    <span>Client: {project.client}</span>
                   </div>
                 )}
               </div>
@@ -235,27 +198,27 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
           viewport={{ once: true }}
           className="grid md:grid-cols-3 gap-6 mb-16"
         >
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
             <div className="text-3xl mb-3">🎯</div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
               The Challenge
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-3">
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
               {project.problem}
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
             <div className="text-3xl mb-3">💡</div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
               The Solution
             </h3>
-            <p className="text-gray-600 dark:text-gray-400 text-sm line-clamp-3">
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
               {project.solution}
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all">
             <div className="text-3xl mb-3">🚀</div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
               Tech Stack
@@ -264,7 +227,7 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
               {project.tech?.slice(0, 4).map((tech) => (
                 <span
                   key={tech}
-                  className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-xs rounded"
+                  className="px-2.5 py-1.5 bg-gradient-to-r from-blue-50 to-cyan-50 dark:from-blue-900/30 dark:to-cyan-900/30 text-blue-700 dark:text-blue-300 text-xs rounded-lg border border-blue-200 dark:border-blue-800"
                 >
                   {tech}
                 </span>
@@ -351,87 +314,23 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
               </span>
               Key Features
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
               {project.features.map((feature, idx) => (
                 <motion.div
                   key={idx}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: idx * 0.1 }}
-                  className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+                  transition={{ delay: idx * 0.05 }}
+                  className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg hover:shadow-xl transition-all flex items-start gap-3"
                 >
-                  <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-lg flex-shrink-0">
-                      {idx + 1}
-                    </div>
-                    <p className="text-gray-700 dark:text-gray-300">
-                      {feature}
-                    </p>
+                  <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
+                    {idx + 1}
                   </div>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    {feature}
+                  </p>
                 </motion.div>
               ))}
-            </div>
-          </motion.section>
-        )}
-
-        {/* Architecture Section */}
-        {project.architecture && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center text-white text-xl">
-                🏗️
-              </span>
-              Architecture
-            </h2>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-              <img
-                src={project.architecture}
-                alt="Architecture Diagram"
-                className="w-full rounded-lg"
-              />
-            </div>
-          </motion.section>
-        )}
-
-        {/* Timeline Section */}
-        {project.timeline && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-12 h-12 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center text-white text-xl">
-                📅
-              </span>
-              Project Timeline
-            </h2>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-              <div className="space-y-8">
-                {project.timeline.map((item, idx) => (
-                  <div key={idx} className="flex gap-6">
-                    <div className="w-32 flex-shrink-0">
-                      <div className="font-semibold text-gray-900 dark:text-white">
-                        {item.phase}
-                      </div>
-                      <div className="text-sm text-gray-500 dark:text-gray-400">
-                        {item.duration}
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <p className="text-gray-700 dark:text-gray-300">
-                        {item.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
           </motion.section>
         )}
@@ -462,36 +361,6 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
                   <div className="text-3xl font-bold mb-2">{metric.value}</div>
                   <div className="text-sm opacity-90">{metric.label}</div>
                 </motion.div>
-              ))}
-            </div>
-          </motion.section>
-        )}
-
-        {/* Screenshots Gallery */}
-        {project.screenshots && (
-          <motion.section
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="mb-16"
-          >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-              <span className="w-12 h-12 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center text-white text-xl">
-                📸
-              </span>
-              Screenshots
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6">
-              {project.screenshots.map((screenshot, idx) => (
-                <motion.img
-                  key={idx}
-                  src={screenshot}
-                  alt={`Screenshot ${idx + 1}`}
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  whileHover={{ scale: 1.05 }}
-                  className="rounded-xl shadow-lg cursor-pointer"
-                />
               ))}
             </div>
           </motion.section>
@@ -555,13 +424,23 @@ const CaseStudy: React.FC<CaseStudyProps> = ({ projects }) => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-3 bg-white text-gray-900 font-semibold rounded-xl hover:shadow-xl transition-all"
+                className="px-8 py-3.5 bg-white text-gray-900 font-semibold rounded-xl hover:shadow-xl transition-all flex items-center gap-2"
               >
+                <ExternalLink size={18} />
                 View Live Demo
+              </a>
+              <a
+                href={project.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-3.5 bg-gray-900 text-white font-semibold rounded-xl hover:bg-gray-800 transition-all flex items-center gap-2"
+              >
+                <Github size={18} />
+                View Source Code
               </a>
               <Link
                 to="/#contact"
-                className="px-8 py-3 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition-all"
+                className="px-8 py-3.5 border-2 border-white text-white font-semibold rounded-xl hover:bg-white hover:text-gray-900 transition-all"
               >
                 Contact Me
               </Link>
