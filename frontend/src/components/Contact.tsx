@@ -323,7 +323,7 @@ const Contact: React.FC<ContactProps> = ({
                                 ? "border-red-500 bg-red-50 dark:bg-red-900/20"
                                 : "border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 focus:border-blue-500"
                             } text-gray-800 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:outline-none`}
-                            placeholder="John Doe"
+                            placeholder="alex taweke"
                           />
                           {errors.name && (
                             <motion.p
@@ -354,7 +354,7 @@ const Contact: React.FC<ContactProps> = ({
                                 ? "border-red-500 bg-red-50 dark:bg-red-900/20"
                                 : "border-gray-300 dark:border-gray-600 bg-white/50 dark:bg-gray-700/50 focus:border-blue-500"
                             } text-gray-800 dark:text-white focus:ring-4 focus:ring-blue-500/20 focus:outline-none`}
-                            placeholder="you@example.com"
+                            placeholder="alextaweke@gmail.com"
                           />
                           {errors.email && (
                             <motion.p
