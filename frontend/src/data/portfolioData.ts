@@ -166,8 +166,8 @@ export const portfolioData = {
       description:
         "AI-powered customer support platform that enables businesses to manage customer conversations, build organization-specific knowledge bases, and provide intelligent real-time support using Retrieval-Augmented Generation (RAG).",
 
-      link: "YOUR_LIVE_DEMO_URL",
-      github: "YOUR_GITHUB_REPOSITORY_URL",
+      link: "#",
+      github: "https://github.com/alextaweke/AI-SaaS-Support",
       image: "images/ai-customer-support.png",
 
       category: "ai saas",
@@ -229,7 +229,7 @@ export const portfolioData = {
       description:
         "Intelligent AI-powered platform that automatically finds, matches, and generates personalized proposals for Upwork jobs based on user skills.",
 
-      link: "https://your-domain.com", // Replace with your deployed URL
+      link: "#", // Replace with your deployed URL
       github: "https://github.com/alextaweke/ai-upwork-matcher", // Replace with your GitHub URL
       image: "images/ai-job-matcher-dashboard.webp",
 
