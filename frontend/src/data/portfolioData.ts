@@ -162,6 +162,69 @@ export const portfolioData = {
       featured: true,
     },
     {
+      title: "AI Customer Support SaaS",
+      description:
+        "AI-powered customer support platform that enables businesses to manage customer conversations, build organization-specific knowledge bases, and provide intelligent real-time support using Retrieval-Augmented Generation (RAG).",
+
+      link: "YOUR_LIVE_DEMO_URL",
+      github: "YOUR_GITHUB_REPOSITORY_URL",
+      image: "images/ai-customer-support.png",
+
+      category: "ai saas",
+
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "Redis",
+        "Celery",
+        "Django Channels",
+        "WebSockets",
+        "Sentence Transformers",
+        "RAG",
+      ],
+
+      problem:
+        "Customer support teams spend significant time answering repetitive questions, searching through company documentation, and managing conversations manually. Businesses need a centralized platform that can provide fast, consistent answers while allowing support teams to monitor and manage customer conversations.",
+
+      solution:
+        "Built a multi-tenant AI customer support SaaS that combines conversational AI with organization-specific knowledge bases. The platform allows businesses to manage organizations, upload documents, retrieve relevant information using semantic search, and provide AI-powered responses through real-time conversations.",
+
+      features: [
+        "AI-powered customer support conversations",
+        "Retrieval-Augmented Generation (RAG)",
+        "Organization-specific knowledge bases",
+        "Document upload and processing",
+        "Semantic document search using embeddings",
+        "Real-time conversations using WebSockets",
+        "Real-time notification system",
+        "Multi-tenant organization architecture",
+        "JWT authentication and authorization",
+        "Conversation and message management",
+        "Background processing with Celery",
+        "Redis-powered asynchronous processing",
+        "Django REST Framework APIs",
+        "Responsive Next.js SaaS dashboard",
+        "Conversation monitoring and management",
+      ],
+
+      challenges: [
+        "Designing a secure multi-tenant architecture that isolates organization data.",
+        "Connecting AI responses to organization-specific documents using RAG.",
+        "Implementing semantic search using document embeddings.",
+        "Building real-time communication using Django Channels and WebSockets.",
+        "Processing document and AI workloads asynchronously using Celery and Redis.",
+        "Managing JWT authentication across REST APIs and WebSocket connections.",
+        "Keeping conversations and notifications synchronized in real time.",
+      ],
+
+      featured: true,
+    },
+
+    {
       title: "AI Job Matcher - Upwork Freelancer Automation",
       description:
         "Intelligent AI-powered platform that automatically finds, matches, and generates personalized proposals for Upwork jobs based on user skills.",
