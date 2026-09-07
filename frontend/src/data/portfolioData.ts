@@ -162,6 +162,75 @@ export const portfolioData = {
       featured: true,
     },
     {
+      title: "AI Video Automation SaaS",
+
+      description:
+        "AI-powered video automation platform that transforms a simple topic into a complete short-form video using AI-generated scripts, voiceovers, video scenes, and automated media processing.",
+
+      link: "#", // Replace with your deployed URL
+
+      github: "https://github.com/alextaweke/ai-video-automation",
+
+      image: "images/ai-video-automation.png",
+
+      category: "ai video automation",
+
+      tech: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Django",
+        "Django REST Framework",
+        "PostgreSQL",
+        "Celery",
+        "Redis",
+        "Google Gemini AI",
+        "ElevenLabs",
+        "KIE AI",
+        "FFmpeg",
+        "Webhooks",
+      ],
+
+      problem:
+        "Creating short-form videos manually requires multiple separate processes including script writing, voice recording, visual generation, video editing, and exporting. Content creators and businesses need an automated workflow that can transform an idea into a ready-to-publish video with minimal manual work.",
+
+      solution:
+        "Built an AI-powered video automation platform that uses Google Gemini to generate structured scripts and scenes, ElevenLabs to create AI voiceovers, and KIE AI to generate individual video scenes. Django and Celery orchestrate the asynchronous workflow while Redis manages background jobs. KIE webhooks track scene completion, and FFmpeg is used to combine scenes, process audio, and generate the final video.",
+
+      features: [
+        "AI-powered video script generation",
+        "Automatic scene generation",
+        "Structured visual prompts for each scene",
+        "AI voiceover generation with ElevenLabs",
+        "Multi-scene AI video generation",
+        "KIE AI asynchronous video generation",
+        "Webhook-based scene completion tracking",
+        "Individual scene status management",
+        "Celery background processing",
+        "Redis-powered task queue",
+        "PostgreSQL video and scene management",
+        "Automatic video downloading",
+        "FFmpeg-based video processing",
+        "Final video generation",
+        "Video generation progress tracking",
+        "REST API architecture",
+        "Responsive Next.js dashboard",
+      ],
+
+      challenges: [
+        "Designing an asynchronous workflow across multiple AI services",
+        "Managing multiple KIE video generation tasks for a single video",
+        "Tracking individual scene status through webhook callbacks",
+        "Handling failures during AI video generation",
+        "Coordinating Gemini, ElevenLabs, and KIE AI APIs",
+        "Managing long-running tasks with Celery and Redis",
+        "Downloading and processing large video files",
+        "Combining multiple generated scenes using FFmpeg",
+        "Synchronizing AI-generated narration with video scenes",
+        "Designing the system for future scaling and SaaS features",
+      ],
+    },
+    {
       title: "AI Customer Support SaaS",
       description:
         "AI-powered customer support platform that enables businesses to manage customer conversations, build organization-specific knowledge bases, and provide intelligent real-time support using Retrieval-Augmented Generation (RAG).",
@@ -321,75 +390,7 @@ export const portfolioData = {
 
       featured: true,
     },
-    {
-      title: "AI Video Automation SaaS",
 
-      description:
-        "AI-powered video automation platform that transforms a simple topic into a complete short-form video using AI-generated scripts, voiceovers, video scenes, and automated media processing.",
-
-      link: "#", // Replace with your deployed URL
-
-      github: "https://github.com/alextaweke/ai-video-automation",
-
-      image: "images/ai-video-automation.png",
-
-      category: "ai video automation",
-
-      tech: [
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Django",
-        "Django REST Framework",
-        "PostgreSQL",
-        "Celery",
-        "Redis",
-        "Google Gemini AI",
-        "ElevenLabs",
-        "KIE AI",
-        "FFmpeg",
-        "Webhooks",
-      ],
-
-      problem:
-        "Creating short-form videos manually requires multiple separate processes including script writing, voice recording, visual generation, video editing, and exporting. Content creators and businesses need an automated workflow that can transform an idea into a ready-to-publish video with minimal manual work.",
-
-      solution:
-        "Built an AI-powered video automation platform that uses Google Gemini to generate structured scripts and scenes, ElevenLabs to create AI voiceovers, and KIE AI to generate individual video scenes. Django and Celery orchestrate the asynchronous workflow while Redis manages background jobs. KIE webhooks track scene completion, and FFmpeg is used to combine scenes, process audio, and generate the final video.",
-
-      features: [
-        "AI-powered video script generation",
-        "Automatic scene generation",
-        "Structured visual prompts for each scene",
-        "AI voiceover generation with ElevenLabs",
-        "Multi-scene AI video generation",
-        "KIE AI asynchronous video generation",
-        "Webhook-based scene completion tracking",
-        "Individual scene status management",
-        "Celery background processing",
-        "Redis-powered task queue",
-        "PostgreSQL video and scene management",
-        "Automatic video downloading",
-        "FFmpeg-based video processing",
-        "Final video generation",
-        "Video generation progress tracking",
-        "REST API architecture",
-        "Responsive Next.js dashboard",
-      ],
-
-      challenges: [
-        "Designing an asynchronous workflow across multiple AI services",
-        "Managing multiple KIE video generation tasks for a single video",
-        "Tracking individual scene status through webhook callbacks",
-        "Handling failures during AI video generation",
-        "Coordinating Gemini, ElevenLabs, and KIE AI APIs",
-        "Managing long-running tasks with Celery and Redis",
-        "Downloading and processing large video files",
-        "Combining multiple generated scenes using FFmpeg",
-        "Synchronizing AI-generated narration with video scenes",
-        "Designing the system for future scaling and SaaS features",
-      ],
-    },
     {
       title: "AI Translator App - Afaan Oromo, English & Amharic",
 
